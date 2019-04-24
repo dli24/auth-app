@@ -23,12 +23,24 @@ app.get('/', (req,res)=>{
     res.send('<h1>Auth APP</h1>');
 });
 
-//GET New User Route
+//GET New User Route, SignUp Route
 app.get('/signup', (req,res)=>{
-    res.render('auth/signup',{message: 'hi'})
+    res.render('auth/signup')
 
 })
 
+//Create USER ROUTE POST for Sign Up
+app.post('/signup', (req,res)=>{
+    db.User.create(req.body, (err,newUser)=> {
+        if (err) return res.render('auth/signup', { errors: [err]});
+        res.redirect('/login');
+    });
+});
+
+//Get Login Route
+app.get('/login', (req,res)=>{
+    res.render('auth/login');
+});
 
 
 
