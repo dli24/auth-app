@@ -20,7 +20,11 @@ app.get('/', (req,res)=>{
     res.send('<h1>Auth APP</h1>');
 });
 
+//GET New User Route
+app.get('/signup', (req,res)=>{
+    res.send('<h1>Sign Up</h1>')
 
+})
 
 
 
