@@ -1,24 +1,25 @@
 <% include ../partials/_head.ejs %>
 
-<section class="login">
+<section class="signup">
     <div>
-        <h1>Login</h1>
+        <h1>Sign Up</h1>
+    <%= message %>
         <form action="">
             <div class="form-group">
                 <label for="name">Name</label>
                 <input type="text" id="name" name="name" />
             </div>
             <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="email" id="email" name="email" />
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" />
             </div>
             <div class="form-group">
-                        <label for="password">Password</label>
-                        <input type="password" id="password" name="password" />
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" />
             </div>
             <div class="form-group">
-                            <label for="password2">Confirm Password</label>
-                            <input type="password" id="password2" name="password2" />
+                <label for="password2">Confirm Password</label>
+                <input type="password" id="password2" name="password2" />
             </div>
           <input type="submit" value="Sign Up" />
         </form>
