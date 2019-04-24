@@ -3,6 +3,9 @@ const bodyParser = require('body-parser');
 const app = express();
 const PORT = process.env.PORT || 4000;
 
+//Database
+const db = require('./models');
+
 // ============================Middle Ware=========================//
 //Parse URL ENCODED
 app.use(bodyParser.urlencoded({extened: true}));
